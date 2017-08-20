@@ -21,6 +21,7 @@ def daily_updates():
     now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
     subject = 'Daily Updates from DrBOT %s' % now
     context = []
+    context.append('# Weather')
     context.append(get_weather('mountain view'))
     context.append(get_weather('irvine'))
     context.append(get_weather('shanghai'))

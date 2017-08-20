@@ -18,12 +18,12 @@ def format_weather(info):
                 'temp': '73',\
                 'city': 'shanghai'}
     >>> format_weather(info)
-    'SHANGHAI\\nSun, 20 Aug 2017 11:00 AM PDT\\n22C, Mostly Sunny'
+    'SHANGHAI\\n\\tSun, 20 Aug 2017 11:00 AM PDT\\n\\t22C, Mostly Sunny'
     """
     lines = [info['city'].upper()]
     lines.append(info['date'])
     lines.append(str(info['temp_c']) + 'C, ' + info['text'])
-    return '\n'.join(lines)
+    return '\n\t'.join(lines)
 
 def get_weather(location):
     weather = Weather()

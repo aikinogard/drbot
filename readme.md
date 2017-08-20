@@ -1,10 +1,11 @@
-#DrBOT
+# DrBOT
+---
 
-##About
+## About
 
 DrBOT is a personal assistant based on python and celery. It can automatically check the information of your interest and give you updates.
 
-##Email configuration
+## Email configuration
 
 You need to allow ["less secure apps"](https://www.google.com/settings/security/lesssecureapps) on your Gmail account.
 	
@@ -16,9 +17,9 @@ Enter the email configuration in `email_configuration.json`
 		"receivers": ["receiver1@gmail.com", "receiver2@gmail.com"]
 	}
 
-##Setup
+## Setup
 
-###install redis
+### install redis
 
 	wget http://download.redis.io/redis-stable.tar.gz
 	tar xvzf redis-stable.tar.gz
@@ -34,7 +35,7 @@ Enter the email configuration in `email_configuration.json`
 ### install python dependency
 	pip install -r requirements.txt
 	
-##Run Celery
+## Run Celery
 
 start a redis server
 

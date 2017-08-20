@@ -11,9 +11,8 @@ app = Celery('tasks', broker='redis://localhost:6379/0')
 #periodic tasks
 app.conf.beat_schedule = {
     'perminute': {
-        'task': 'daily_updates',
-        'schedule': crontab(minute=0, hour=8),
-        'args': ()
+        'task': 'tasks.daily_updates',
+        'schedule': crontab(minute=0, hour=8)
     }
 }
 

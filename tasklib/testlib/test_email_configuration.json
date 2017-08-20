@@ -1,0 +1,5 @@
+{
+	"sender": "senderXXX@gmail.com",
+	"password": "senderpassword",
+	"receivers": ["receiver1@gmail.com", "receiver2@gmail.com"]
+}

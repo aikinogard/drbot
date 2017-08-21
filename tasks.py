@@ -1,5 +1,4 @@
 import time
-import datetime
 import logging
 from celery import Celery
 from celery.schedules import crontab
@@ -18,8 +17,7 @@ app.conf.beat_schedule = {
 
 @app.task
 def daily_updates():
-    now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
-    subject = 'Daily Updates from DrBOT %s' % now
+    subject = 'Daily Updates from DrBOT'
     context = []
     context.append('# Weather')
     context.append(get_weather('mountain view'))
